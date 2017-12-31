@@ -7,7 +7,11 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
   public category: string = 'movies';
+  public categories: Array<string> = ['movies', 'tvshows', 'animated']
 
   constructor(public navCtrl: NavController) { }
 
+  onTabChanged(tabName) {
+    this.category = tabName;
+  }
 }

@@ -21,7 +21,7 @@
 </ion-header>
 
 <ion-content>
-  <div [ngSwitch]="category">
+  <div [ngSwitch]="category" swipeSegment [tabsList]="categories" [(currentTab)]="category" (tabChanged)="onTabChanged($event)" class="swipe-area">
     <ion-list *ngSwitchCase="'movies'">
       <ion-item>
         Batman Begins

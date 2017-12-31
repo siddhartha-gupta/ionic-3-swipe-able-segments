@@ -6,11 +6,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { SwipeSegmentDirective } from '../directives/swipe-segment.directive';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    SwipeSegmentDirective
   ],
   imports: [
     BrowserModule,
