@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, Output, EventEmitter, HostListener, OnInit } from '@angular/core';
+import { Directive, ElementRef, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Gesture } from 'ionic-angular/gestures/gesture';
 
 @Directive({
@@ -13,7 +13,7 @@ export class SwipeSegmentDirective implements OnInit {
     @Input() currentTab: string = '';
     @Output() tabChanged: EventEmitter<string> = new EventEmitter<string>();
 
-    constructor(private _el: ElementRef) {
+    constructor(public _el: ElementRef) {
         this.el = _el.nativeElement;
     }
 
