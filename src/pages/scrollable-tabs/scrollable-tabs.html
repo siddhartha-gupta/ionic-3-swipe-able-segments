@@ -1,0 +1,196 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <ion-title>
+      Swipable Segments
+    </ion-title>
+  </ion-navbar>
+
+  <ion-toolbar #toolbar no-border-top>
+    <ion-segment [(ngModel)]="category">
+      <ion-segment-button value="movies">
+        Movies
+      </ion-segment-button>
+      <ion-segment-button value="tvshows">
+        Tv Shows
+      </ion-segment-button>
+      <ion-segment-button value="animated">
+        Animated
+      </ion-segment-button>
+      <ion-segment-button value="comedy">
+        Comedy
+      </ion-segment-button>
+      <ion-segment-button value="horror">
+        Horror
+      </ion-segment-button>
+      <ion-segment-button value="action">
+        Action
+      </ion-segment-button>
+      <ion-segment-button value="romance">
+        Romance
+      </ion-segment-button>
+      <ion-segment-button value="drama">
+        Drama
+      </ion-segment-button>
+      <ion-segment-button value="adventure">
+        Adventure
+      </ion-segment-button>
+      <ion-segment-button value="fiction">
+        Fiction
+      </ion-segment-button>
+      <ion-segment-button value="spy">
+        Spy
+      </ion-segment-button>
+      <ion-segment-button value="mystery">
+        Mystery
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="category" swipeSegment [tabsList]="categories" [(currentTab)]="category" (tabChanged)="onTabChanged($event)" class="swipe-area">
+    <ion-list *ngSwitchCase="'movies'">
+      <ion-item>
+        Batman Begins
+      </ion-item>
+      <ion-item>
+        Transporter
+      </ion-item>
+      <ion-item>
+        Million Dollar Baby
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'tvshows'">
+      <ion-item>
+        Game of Thrones
+      </ion-item>
+      <ion-item>
+        Daredevil
+      </ion-item>
+      <ion-item>
+        Arrow
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'animated'">
+      <ion-item>
+        Ice Age
+      </ion-item>
+      <ion-item>
+        Lion King
+      </ion-item>
+      <ion-item>
+        Up
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'comedy'">
+      <ion-item>
+        Comedy
+      </ion-item>
+      <ion-item>
+        Comedy
+      </ion-item>
+      <ion-item>
+        Comedy
+      </ion-item>
+    </ion-list>
+    
+    <ion-list *ngSwitchCase="'horror'">
+      <ion-item>
+        Horror
+      </ion-item>
+      <ion-item>
+        Horror
+      </ion-item>
+      <ion-item>
+        Horror
+      </ion-item>
+    </ion-list>
+    
+    <ion-list *ngSwitchCase="'action'">
+      <ion-item>
+        Action
+      </ion-item>
+      <ion-item>
+        Action
+      </ion-item>
+      <ion-item>
+        Action
+      </ion-item>
+    </ion-list>
+    
+    <ion-list *ngSwitchCase="'romance'">
+      <ion-item>
+        Romance
+      </ion-item>
+      <ion-item>
+        Romance
+      </ion-item>
+      <ion-item>
+        Romance
+      </ion-item>
+    </ion-list>
+    
+    <ion-list *ngSwitchCase="'drama'">
+      <ion-item>
+        Drama
+      </ion-item>
+      <ion-item>
+        Drama
+      </ion-item>
+      <ion-item>
+        Drama
+      </ion-item>
+    </ion-list>
+    
+    <ion-list *ngSwitchCase="'adventure'">
+      <ion-item>
+        Adventure
+      </ion-item>
+      <ion-item>
+        Adventure
+      </ion-item>
+      <ion-item>
+        Adventure
+      </ion-item>
+    </ion-list>
+    
+    <ion-list *ngSwitchCase="'fiction'">
+      <ion-item>
+        Fiction
+      </ion-item>
+      <ion-item>
+        Fiction
+      </ion-item>
+      <ion-item>
+        Fiction
+      </ion-item>
+    </ion-list>
+    
+    <ion-list *ngSwitchCase="'spy'">
+      <ion-item>
+        Spy
+      </ion-item>
+      <ion-item>
+        Spy
+      </ion-item>
+      <ion-item>
+        Spy
+      </ion-item>
+    </ion-list>
+    
+    <ion-list *ngSwitchCase="'mystery'">
+      <ion-item>
+        Mystery
+      </ion-item>
+      <ion-item>
+        Mystery
+      </ion-item>
+      <ion-item>
+        Mystery
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

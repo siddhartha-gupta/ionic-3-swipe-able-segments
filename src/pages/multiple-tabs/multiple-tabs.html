@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <ion-title>
+      Swiping within mutliple tabs
+    </ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="category">
+      <ion-segment-button value="movies">
+        Movies
+      </ion-segment-button>
+      <ion-segment-button value="animated">
+        Animated
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="category" swipeSegment [tabsList]="categories" [(currentTab)]="category" (tabChanged)="onTabChanged($event)" class="swipe-area">
+    <ion-list *ngSwitchCase="'movies'">
+      <ion-item>
+        Batman Begins
+      </ion-item>
+      <ion-item>
+        Transporter
+      </ion-item>
+      <ion-item>
+        Million Dollar Baby
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'animated'">
+      <ion-item>
+        Ice Age
+      </ion-item>
+      <ion-item>
+        Lion King
+      </ion-item>
+      <ion-item>
+        Up
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
