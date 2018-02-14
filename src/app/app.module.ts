@@ -6,18 +6,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ManyTabs } from '../pages/many-tabs/many-tabs';
-import { MultipleTabs } from '../pages/multiple-tabs/multiple-tabs';
-import { ScrollableTabs } from '../pages/scrollable-tabs/scrollable-tabs';
 import { SwipeSegmentDirective } from '../directives/swipe-segment.directive';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ManyTabs,
-    MultipleTabs,
-    ScrollableTabs,
     SwipeSegmentDirective
   ],
   imports: [
@@ -27,15 +21,12 @@ import { SwipeSegmentDirective } from '../directives/swipe-segment.directive';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ManyTabs,
-    MultipleTabs,
-    ScrollableTabs
+    HomePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
-export class AppModule { }
+export class AppModule {}
